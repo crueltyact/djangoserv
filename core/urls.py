@@ -20,8 +20,6 @@ from core.routers import router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('themes.urls')),
-    path('api/', include('project_id.urls')),
-    # path('api/', include('template.urls')),
+    
     path('api/', include(router.urls)),
 ]   

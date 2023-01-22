@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from template.models import Template
 
-class TemplateSerializer(serializers.Serializer):
+class TemplateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Template
-        fields = ('__all__')
+        fields = '__all__'
