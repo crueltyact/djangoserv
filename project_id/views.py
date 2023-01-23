@@ -1,11 +1,10 @@
-from django.core import serializers
-from project_id.models import MyProject
-from django.http import JsonResponse
-from rest_framework.response import Response
+from project_id.serializers import MyProjectSerializer
+from project_id.models import MyProject  
+from rest_framework.viewsets import ModelViewSet
 
-def MyProject_list(request):
-    MyProjects = MyProject.objects.all()
-    data = serializers.serialize("json", MyProjects)
-    return JsonResponse(data={'data':data})
+class MyProjectViewSet(ModelViewSet):
+    queryset = MyProject .objects.all()
+    serializer_class = MyProjectSerializer
+
 
 # Create your views here.
