@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     
     # 3rd party app's
     'rest_framework',
+    'import_export',
+    'modeltranslation',
     
     # custom apps
     'authentif',
