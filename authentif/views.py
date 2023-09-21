@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from authentif.serializers import UserSerializers
 from authentif.models import User
 from rest_framework.viewsets import ModelViewSet
@@ -6,6 +7,12 @@ from rest_framework.decorators import action
 from rest_framework.exceptions import ValidationError, NotFound, AuthenticationFailed
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated 
+
+def index_page(request):
+    return render(request, 'index.html')
+
+def about_page(request):
+    return render(request, 'about.html')
 
 class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
@@ -54,3 +61,5 @@ class UserViewSet(ModelViewSet):
         response = Response()
         response.delete_cookie('refresh')
         return response
+    
+

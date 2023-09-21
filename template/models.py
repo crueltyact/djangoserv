@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Template(models.Model):
-    name = models.CharField(verbose_name='Template name', max_length=50)
+    name = models.CharField(verbose_name='Template name', max_length=255)
     desc = models.TextField(verbose_name='Description', max_length=255)
     cover = models.ImageField(verbose_name='Cover', upload_to='users/photos')
 

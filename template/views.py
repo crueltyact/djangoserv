@@ -8,3 +8,4 @@ class TemplateViewSet(ModelViewSet):
     queryset = Template.objects.all()
     serializer_class = TemplateSerializer
     
+

@@ -16,9 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from core.routers import router
+from authentif.views import index_page
+from authentif.views import about_page
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),   
     path('api/', include(router.urls)),
+    path('home/', index_page),
+    path('about/', about_page),
 ]   
