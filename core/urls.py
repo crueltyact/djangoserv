@@ -18,11 +18,13 @@ from django.urls import path, include
 from core.routers import router
 from authentif.views import index_page
 from authentif.views import about_page
+from authentif.views import login_page
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),   
     path('api/', include(router.urls)),
-    path('home/', index_page),
-    path('about/', about_page),
+    path('home/', index_page,),
+    path('about/', about_page,),
+    path('login/', login_page),
 ]   

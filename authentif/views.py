@@ -14,6 +14,9 @@ def index_page(request):
 def about_page(request):
     return render(request, 'about.html')
 
+def login_page(request):
+    return render(request, 'login.html')
+
 class UserViewSet(ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializers

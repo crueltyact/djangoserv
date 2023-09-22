@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  django:
+    build:
+    container_name: django
+    command: python manage.py runserver 127.0.0.1:8000
+    dockerfile: Dockerfile
